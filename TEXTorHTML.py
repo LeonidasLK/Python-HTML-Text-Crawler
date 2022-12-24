@@ -6,17 +6,20 @@ z = input("Γράψε text αν θες να δεις το text της σελίδ
 
 if z=="html":
     
-    x = input("Ποιό website?:")
+    x = input("Ποιό website?\n")
 
     y = input("Γράψτε αν ειναι .gr η .com\n")
 
     url = 'https://'+x+y
     
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
     r = requests.get(url,headers=headers)
+
     f=open("htmlcode.txt", 'w')
+
     f.write(r.text)
+
     f.close()
+    
     print (r.text)
 
 else:
