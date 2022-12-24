@@ -12,7 +12,7 @@ if z=="html":
 
     url = 'https://'+x+y
     
-    r = requests.get(url,headers=headers)
+    r = requests.get(url)
 
     f=open("htmlcode.txt", 'w')
 
@@ -23,7 +23,7 @@ if z=="html":
     print (r.text)
 
 else:
-      x2 = input("Δώσε ενα website:\nπχ: Αν θες να δείς τι περιέχει το https://google.com γράψε google\n")
+      x2 = input("Ποιό website:\nπχ: Αν θες να δείς τι περιέχει το https://google.com γράψε google\n")
 
       y2 = input("Γράψε αν ειναι .gr η .com\n")
 
@@ -31,8 +31,8 @@ else:
       
       html = urlopen(url).read()
       
-      headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
-      r = requests.get(url,headers=headers)
+    
+      r = requests.get(url)
       
       soup = BeautifulSoup(html, features="html.parser")
 
