@@ -14,11 +14,10 @@ if z=="html":
     
     r = requests.get(url)
 
-    f=open("htmlcode.txt", 'w')
-
-    f.write(r.text)
-
-    f.close()
+    #Αν θέλουμε να το σώσουμε σε αρχείο
+    #f=open("htmlcode.txt", 'w')
+    #f.write(r.text)
+    #f.close()
     
     print (r.text)
 
@@ -50,8 +49,13 @@ else:
     # drop blank lines
       text = '\n'.join(chunk for chunk in chunks if chunk)
 
+    #Αν θέλουμε να το σώσουμε σε αρχείο
+    #f=open("textcode.txt", 'w')
+    #f.write(r.text)
+    #f.close()
+
       print(text)
-      
+   
 
 
 
